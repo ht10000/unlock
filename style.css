@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: black;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#lockScreen {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(black, #1a001a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#lockScreen input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+}
+
+#three-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.question {
+  display: none;
+  animation: fade 1s ease forwards;
+}
+
+.question.active {
+  display: block;
+}
+
+textarea {
+  width: 80%;
+  height: 90px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ff1493;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #ff69b4;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
