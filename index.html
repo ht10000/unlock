@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Your Eyes Only 💫</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen">
+  <h1>Enter The Secret Code 🔐</h1>
+  <input type="password" id="passwordInput" placeholder="Your special date...">
+  <button onclick="checkPassword()">Unlock 💖</button>
+  <p id="wrongPass"></p>
+</div>
+
+<!-- 3D BACKGROUND -->
+<div id="three-container"></div>
+
+<!-- MAIN CONTENT -->
+<div class="container hidden" id="mainContent">
+  <h1>Answer With Your Heart 💌</h1>
+
+  <form id="loveForm">
+
+    <div class="question active">
+      <p>1. What was your first thought about me and the one thing I said that surprised you the most in the beginning? 💭</p>
+      <textarea name="q1" required></textarea>
+      <button type="button" onclick="nextQuestion()">Next ➝</button>
+    </div>
+
+    <div class="question">
+      <p>2. When did you realize you liked me and that I wasn't just random and why? 💖</p>
+      <textarea name="q2" required></textarea>
+      <button type="button" onclick="nextQuestion()">Next ➝</button>
+    </div>
+
+    <div class="question">
+      <p>3. Who apologises first and who is most likely to last in a fight or an argument? 🌙</p>
+      <textarea name="q3" required></textarea>
+      <button type="submit">Send To Her Heart 💘</button>
+    </div>
+
+  </form>
+
+  <p id="message"></p>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
